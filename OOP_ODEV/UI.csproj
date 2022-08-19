@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{969BBF6F-9AAE-4972-BA0A-A3BBAEE9AF22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOP_ODEV</RootNamespace>
+    <AssemblyName>OOP_ODEV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concretes\EgitimC\EgitimEkle.cs" />
+    <Compile Include="Concretes\EgitimC\EgitimGuncelle.cs" />
+    <Compile Include="Concretes\EgitimC\EgitimSil.cs" />
+    <Compile Include="Concretes\EgitmenC\EgitmenGuncelle.cs" />
+    <Compile Include="Concretes\EgitmenC\EgitmenSil.cs" />
+    <Compile Include="Concretes\Genel\BosAlanKontrol.cs" />
+    <Compile Include="Concretes\EgitmenC\EgitmenOlustur.cs" />
+    <Compile Include="Concretes\Genel\Converts.cs" />
+    <Compile Include="Concretes\Genel\Email.cs" />
+    <Compile Include="Concretes\KoordinatorC\KoordinatorBul.cs" />
+    <Compile Include="Concretes\KoordinatorC\KoordinatorGuncelle.cs" />
+    <Compile Include="Concretes\KoordinatorC\KoordinatorOlustur.cs" />
+    <Compile Include="Concretes\KoordinatorC\KoordinatorSil.cs" />
+    <Compile Include="Concretes\OgrenciC\OgrenciEkle.cs" />
+    <Compile Include="Concretes\OgrenciC\OgrenciGuncelle.cs" />
+    <Compile Include="Concretes\OgrenciC\OgrenciSil.cs" />
+    <Compile Include="Concretes\RandomPassword.cs" />
+    <Compile Include="Concretes\Genel\Temizle.cs" />
+    <Compile Include="Concretes\SubeC\SubeEkle.cs" />
+    <Compile Include="Concretes\SubeC\SubeGuncelle.cs" />
+    <Compile Include="Concretes\SubeC\SubeSil.cs" />
+    <Compile Include="Concretes\SınıfEgitimC\SinifEgitimEkle.cs" />
+    <Compile Include="Concretes\SınıfEgitimC\SinifEgitimGuncelle.cs" />
+    <Compile Include="Concretes\SınıfEgitimC\SinifEgitimSil.cs" />
+    <Compile Include="Concretes\YoneticiC\YoneticiGuncelle.cs" />
+    <Compile Include="Concretes\YoneticiC\YoneticiOlustur.cs" />
+    <Compile Include="Concretes\YoneticiC\YoneticiSil.cs" />
+    <Compile Include="EgitimEkleGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgitimEkleGuncelleSilForm.Designer.cs">
+      <DependentUpon>EgitimEkleGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgitmenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgitmenForm.Designer.cs">
+      <DependentUpon>EgitmenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenelRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenelRaporForm.Designer.cs">
+      <DependentUpon>GenelRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KoordinatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KoordinatorForm.Designer.cs">
+      <DependentUpon>KoordinatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkleForm.Designer.cs">
+      <DependentUpon>KullaniciEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciGuncelleSilForm.Designer.cs">
+      <DependentUpon>KullaniciGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciEkleForm.Designer.cs">
+      <DependentUpon>OgrenciEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciGuncelleSilForm.Designer.cs">
+      <DependentUpon>OgrenciGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinifEkleGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinifEkleGuncelleSilForm.Designer.cs">
+      <DependentUpon>SinifEkleGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinifRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinifRaporForm.Designer.cs">
+      <DependentUpon>SinifRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubeEkleGuncelleSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubeEkleGuncelleSilForm.Designer.cs">
+      <DependentUpon>SubeEkleGuncelleSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubeRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubeRaporForm.Designer.cs">
+      <DependentUpon>SubeRaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoklamaEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoklamaEkleForm.Designer.cs">
+      <DependentUpon>YoklamaEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiForm.Designer.cs">
+      <DependentUpon>YoneticiForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EgitimEkleGuncelleSilForm.resx">
+      <DependentUpon>EgitimEkleGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgitmenForm.resx">
+      <DependentUpon>EgitmenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenelRaporForm.resx">
+      <DependentUpon>GenelRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KoordinatorForm.resx">
+      <DependentUpon>KoordinatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciEkleForm.resx">
+      <DependentUpon>KullaniciEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciGuncelleSilForm.resx">
+      <DependentUpon>KullaniciGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciEkleForm.resx">
+      <DependentUpon>OgrenciEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciGuncelleSilForm.resx">
+      <DependentUpon>OgrenciGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SinifEkleGuncelleSilForm.resx">
+      <DependentUpon>SinifEkleGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinifRaporForm.resx">
+      <DependentUpon>SinifRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubeEkleGuncelleSilForm.resx">
+      <DependentUpon>SubeEkleGuncelleSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubeRaporForm.resx">
+      <DependentUpon>SubeRaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoklamaEkleForm.resx">
+      <DependentUpon>YoklamaEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiForm.resx">
+      <DependentUpon>YoneticiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\PDF_icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1656f604-7caf-4959-a938-a4758e9713f4}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DATA\DATA.csproj">
+      <Project>{26ddbd17-5817-4726-a0cd-af275ecff6aa}</Project>
+      <Name>DATA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
